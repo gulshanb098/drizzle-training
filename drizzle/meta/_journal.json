@@ -1,0 +1,27 @@
+{
+  "version": "7",
+  "dialect": "sqlite",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "6",
+      "when": 1740051217310,
+      "tag": "0000_create_user_table",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "6",
+      "when": 1740051369057,
+      "tag": "0001_add_gender_column",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1740051823369,
+      "tag": "0002_create_category_product_table",
+      "breakpoints": true
+    }
+  ]
+}
