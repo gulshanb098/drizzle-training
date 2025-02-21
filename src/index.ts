@@ -1,10 +1,7 @@
-import 'dotenv/config';
 import { eq } from 'drizzle-orm';
-import { drizzle } from 'drizzle-orm/libsql';
 import { categories, products, users } from './db/schema';
-
-const db = drizzle(process.env.DB_FILE_NAME!);
-// console.log('result', db)
+import { db } from './db';
+import { assessment } from './assessment';
 
 async function main() {
     const userData = [{
@@ -77,6 +74,8 @@ async function main() {
     // const categoryInsert = await db.insert(categories).values(categoryData).returning({id: categories.id});
     // const productInsert = await db.insert(products).values(productData).returning({id: products.id});
     // console.log('Inserted both category and products: ', 'categories', categoryInsert,'products', productInsert)
-
+    
+    await assessment(); // call assignment related tasks
 }
+
 main();
